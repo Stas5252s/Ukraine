@@ -1,0 +1,442 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.5s ease; /* Плавное изменение фона */
+    background-color: rgb(234, 234, 181); /* Начальный фон */
+}
+
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.5s ease;
+}
+
+/* Закругленные углы */
+.section {
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #1c7ed6;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcb05;
+    transform: scale(1.1);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* О стране */
+#about h1, #about p {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.about-content div {
+    flex: 1;
+    animation: slideIn 1.5s ease-out;
+}
+
+.about-content img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+.about-content img:hover {
+    transform: scale(1.05);
+}
+
+/* Культура */
+#culture h2, #culture p {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.culture-icons {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.culture-icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.culture-icons img {
+    border-radius: 50%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.culture-icons div:hover {
+    transform: scale(1.1);
+    color: #1c7ed6;
+}
+
+.culture-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* Галерея */
+.gallery {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.gallery img {
+    width: 150px;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+/* Кухня */
+.cuisine-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.cuisine-list div {
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cuisine-list img {
+    border-radius: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cuisine-list div:hover {
+    transform: scale(1.1);
+    color: #1c7ed6;
+}
+
+.cuisine-list img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Знаменитые места */
+.places-list {
+    list-style-type: none;
+    padding: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.places-list li {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.places-list li:hover {
+    transform: scale(1.05);
+    color: #1c7ed6;
+}
+
+/* Контакты */
+.contact-button {
+    padding: 1rem 2rem;
+    background-color: #1c7ed6;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #ffcb05;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1c7ed6;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Эффект изменения фона при прокрутке */
+body {
+    transition: background-color 1s ease;
+}
+
+section {
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        display: flex;
+    }
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    transition: color 0.4s ease, transform 0.3s ease;
+    transform-origin: center; /* Устанавливаем точку трансформации в центр */
+}
+
+h1:hover, h2:hover, h3:hover {
+    color: #28a745; /* зелёный цвет */
+    transform: scale(1.05); /* Плавное увеличение без смещения */
+}
+
+/* Для секции "О стране" */
+#about h1, #about p {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#about h1:hover, #about p:hover {
+    color: #28a745; /* зелёный цвет при наведении */
+}
+
+/* Для секции "Культура" */
+#culture h2, #culture p {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#culture h2:hover, #culture p:hover {
+    color: #28a745; /* зелёный цвет при наведении */
+}
+
+/* Для секции "Галерея" */
+#gallery h2:hover {
+    color: #28a745; /* зелёный цвет при наведении */
+}
+
+/* Для секции "Кухня" */
+#cuisine h2:hover {
+    color: #28a745; /* зелёный цвет при наведении */
+}
+
+/* Для секции "Знаменитые места" */
+#places h2:hover {
+    color: #28a745; /* зелёный цвет при наведении */
+}
+
+/* Для секции "Контакты" */
+#contact h2:hover {
+    color: #28a745; /* зелёный цвет при наведении */
+}
+
+p {
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease; /* Плавное изменение цвета и масштаба */
+}
+
+p:hover {
+    color: green; /* Цвет текста при наведении */
+    transform: scale(1.1); /* Увеличение текста */
+}
+
+.lilli {
+    /* Стиль для ul */
+    list-style-type: none;  /* Убираем стандартные маркеры */
+    padding: 0;
+    margin: 0;
+    opacity: 0;  /* Скрываем элемент по умолчанию */
+    animation: fadeIn 1s ease-in-out forwards; /* Применяем анимацию появления */
+
+/* Анимация для плавного появления ul */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Дополнительный стиль при наведении на ul */
+
+
+}
+
+.lilli:hover {
+    background-color: #ffffff; /* Меняем фон при наведении */
+    transform: scale(1.05); /* Легкое увеличение */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color:#00d933
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .slide:first-child {
+    display: block;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s, transform 1s;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#timer {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff6347;
+    text-align: center;
+}
+
+#quote-of-the-day {
+    font-style: italic;
+    color: #555;
+    margin: 20px;
+}
